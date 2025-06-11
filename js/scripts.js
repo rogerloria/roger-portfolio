@@ -31,4 +31,25 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // ========================================
+    // 🌐 Lógica de internacionalización
+    // ========================================
+
+    const changeLanguage = (lang) => {
+        const elements = document.querySelectorAll('[data-es][data-en]');
+        elements.forEach(el => {
+            el.textContent = el.getAttribute(`data-${lang}`);
+        });
+    };
+
+    const btnEs = document.getElementById('btn-es');
+    const btnEn = document.getElementById('btn-en');
+
+    if (btnEs && btnEn) {
+        btnEs.addEventListener('click', () => changeLanguage('es'));
+        btnEn.addEventListener('click', () => changeLanguage('en'));
+    }
+
+    // Si querés que arranque en español por defecto:
+    changeLanguage('es');
 });
