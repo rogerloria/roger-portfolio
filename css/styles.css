@@ -10970,3 +10970,42 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+/* Dark mode */
+body.dark-mode {
+  --bs-body-bg: #121212;
+  --bs-body-color: #f1f1f1;
+  --bs-primary: #ff7b5c;
+  --bs-secondary: #bbbbbb;
+  --bs-link-color: #ff916e;
+  --bs-border-color: #444;
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
+/* Asegura que los textos y secciones usen las variables de Bootstrap */
+.dark-mode .resume-section,
+.dark-mode .resume-section-content {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
+/* Ajusta títulos si hace falta */
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode h3, 
+.dark-mode h4 {
+  color: var(--bs-body-color);
+}
+
+/* Íconos o elementos destacados */
+.dark-mode .text-warning {
+  color: #ffb84d !important;
+}
+
+.dark-mode a {
+  color: var(--bs-link-color);
+}
+.dark-mode a:hover {
+  color: #ffa68a;
+}

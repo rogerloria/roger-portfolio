@@ -53,16 +53,18 @@ window.addEventListener('DOMContentLoaded', event => {
     // Si querés que arranque en español por defecto:
     changeLanguage('es');
 
-        // ========================================
-    // 🌓 Modo oscuro
+    // ========================================
+    // 🌓 Modo oscuro con ícono dinámico
     // ========================================
     const switchInput = document.getElementById('darkModeSwitch');
     const body = document.body;
+    const darkModeIcon = document.getElementById('darkModeIcon'); // 🌙/☀️
 
     // Aplicar modo oscuro si ya estaba activado
     if (localStorage.getItem('dark-mode') === 'enabled') {
         body.classList.add('dark-mode');
         if (switchInput) switchInput.checked = true;
+        if (darkModeIcon) darkModeIcon.textContent = '☀️';
     }
 
     // Escuchar cambios del switch
@@ -71,9 +73,11 @@ window.addEventListener('DOMContentLoaded', event => {
             if (switchInput.checked) {
                 body.classList.add('dark-mode');
                 localStorage.setItem('dark-mode', 'enabled');
+                if (darkModeIcon) darkModeIcon.textContent = '☀️';
             } else {
                 body.classList.remove('dark-mode');
                 localStorage.setItem('dark-mode', 'disabled');
+                if (darkModeIcon) darkModeIcon.textContent = '🌙';
             }
         });
     }
