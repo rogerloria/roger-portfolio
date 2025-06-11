@@ -52,4 +52,30 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // Si querés que arranque en español por defecto:
     changeLanguage('es');
+
+        // ========================================
+    // 🌓 Modo oscuro
+    // ========================================
+    const switchInput = document.getElementById('darkModeSwitch');
+    const body = document.body;
+
+    // Aplicar modo oscuro si ya estaba activado
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+        if (switchInput) switchInput.checked = true;
+    }
+
+    // Escuchar cambios del switch
+    if (switchInput) {
+        switchInput.addEventListener('change', () => {
+            if (switchInput.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('dark-mode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('dark-mode', 'disabled');
+            }
+        });
+    }
+
 });
