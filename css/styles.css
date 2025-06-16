@@ -11031,3 +11031,51 @@ body.dark-mode {
 .dark-mode .text-primary {
   color: #fff !important;
 }
+
+/* Barra lateral */
+/* 🎨 Modo claro (por defecto) */
+#sideNav {
+  background-color: var(--bs-primary); /* tu azul */
+  color: var(--bs-white);
+}
+
+#sideNav .nav-link {
+  color: var(--bs-white);
+}
+#sideNav .nav-link:hover {
+  color: var(--bs-warning);
+}
+
+/* 🌙 Modo oscuro */
+body.dark-mode #sideNav {
+  background-color: var(--bs-dark); /* fondo oscuro */
+  color: var(--bs-white);
+}
+
+body.dark-mode #sideNav .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+}
+body.dark-mode #sideNav .nav-link:hover {
+  color: var(--bs-warning);
+}
+
+body.dark-mode #sideNav .navbar-toggler:focus {
+  outline-color: var(--bs-warning);
+}
+
+/* Color del ícono (luz u oscuro) */
+#darkModeIcon {
+  color: var(--bs-dark); /* Modo claro */
+  transition: color 0.3s ease;
+}
+
+body.dark-mode #darkModeIcon {
+  color: var(--bs-warning); /* o --bs-light si querés blanco */
+}
+
+/* Color del switch en modo oscuro */
+body.dark-mode .form-check-input {
+  background-color: var(--bs-warning);
+  border-color: var(--bs-warning);
+}
+
