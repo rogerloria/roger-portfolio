@@ -1,4 +1,4 @@
-# Portafolio Profesional - Roger Dev
+# Portafolio Profesional - Roger Loria
 
 ¡Hola! Soy Roger, Ingeniero en Informática.  
 Este portafolio muestra algunos de mis proyectos más relevantes, con foco en el desarrollo de APIs REST utilizando Spring Boot, así como otras tecnologías modernas del ecosistema web.
